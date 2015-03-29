@@ -77,4 +77,10 @@ $(document).ready(function(){
   		var ay = ($(window).innerHeight()/2- e.pageY)/20;
   		card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
 	});
+
+	$('.left-side').blurjs({ 
+		source: '.focus-header', 
+		cache: true, debug: true,
+		overlay: 'rgba(255,255,255,0.3)'
+	});
 });
