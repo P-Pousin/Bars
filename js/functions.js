@@ -83,4 +83,17 @@ $(document).ready(function(){
 		cache: true, debug: true,
 		overlay: 'rgba(255,255,255,0.3)'
 	});
+	var menuFocus = $('.left-container li');
+	menuFocus.click(function() {
+		if ($(this).hasClass('active')) {
+
+		}
+		else {
+			menuFocus.removeClass('active');
+			$(this).addClass('active');
+			name = $(this).attr('section');
+			$('.right-container div').css('display', 'none');
+			$('.right-container .'+name).css('display', 'block');
+		}
+	});
 });

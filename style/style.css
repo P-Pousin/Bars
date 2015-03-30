@@ -18,7 +18,8 @@ article {
   font-size: 30px;
   color: #fff;
   opacity: 0.99;
-  background-image: url(./../img/aside_bg.jpg);
+  /*background-image: url(./../img/aside_bg.jpg);*/
+  background-color: #171614;
   background-position: center;
 }
 article p {
@@ -216,7 +217,9 @@ SECTION HOME
   /* ----- 
   LOGO HOME
   ----- */
-
+#home > article:nth-child(1) {
+  background-color: transparent;
+}
 .logo-home {
   z-index: 9999;
   background: #171614;
@@ -363,7 +366,7 @@ SECTION CONCEPT
   height: auto; 
   position: absolute; 
   text-align: center; 
-  top: 150px; 
+  top: 0; 
   width: 100%; 
 }
 .clear-bottom {
@@ -392,7 +395,7 @@ SECTION CONTACT
   height: auto; 
   position: absolute; 
   text-align: center; 
-  top: 150px; 
+  top: 0; 
   width: 100%; 
 }
 .contact-form {
