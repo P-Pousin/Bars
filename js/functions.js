@@ -92,8 +92,9 @@ $(document).ready(function(){
 			menuFocus.removeClass('active');
 			$(this).addClass('active');
 			name = $(this).attr('section');
-			$('.right-container div').css('display', 'none');
+			$('.right-container .container-element').css('display', 'none');
 			$('.right-container .'+name).css('display', 'block');
 		}
 	});
+
 });

@@ -14,6 +14,8 @@
 	    <link href="style/style.css" rel="stylesheet">
 	    <link href="style/focus.css" rel="stylesheet">
 	    <link href="style/grid.css" rel="stylesheet">
+	    <link href="style/focus.css" rel="stylesheet">
+	    <!--<link href="style/grid-masonry.css" rel="stylesheet">-->
 	    <!--
 	    <link href="style/style.min.css" rel="stylesheet">
 	    <link href="style/grid.min.css" rel="stylesheet">
@@ -57,20 +59,55 @@
 			<main class="focus-container">
 				<section class="left-container">
 					<ul>
-						<li class="active" section="presentation"><span>Présentation</span></li>
-						<li section="gallery"><span>Gallery Photo</span></li>
-						<li section="carte"><span>Carte</span></li>
+						<li class="active" section="presentation"><a class="second after">Présentation</a></li>
+						<li section="gallery"><a class="second after">Gallerie Photo</a></li>
+						<li section="carte"><a class="second after">Carte</a></li>
 					</ul>
 				</section>
 				<section class="right-container">
-					<div class="presentation">
-						<h1>Présentation</h1>
+					<div class="presentation container-element">
+						<span>Présentation</span>
 					</div>
-					<div class="gallery">
-						<h1>Gallerie</h1>
+					<div class="gallery container-element">
+						<span>Gallerie Photo</span>
+						<div class="grid">
+			        		<div class="item">
+			        			<a class="link" href="#">
+			        				<div class="hovercontent">
+			        					<i class="fa fa-plus fa-3x"></i>
+			        				</div>
+			        				<img  src="img/Bordeaux-item.jpg" />
+			        			</a>
+			        		</div>
+			        		<div class="item">
+			        			<a class="link" href="#">
+			        				<div class="hovercontent">
+			        					<i class="fa fa-plus fa-3x"></i>
+			        				</div>
+			        				<img src="img/item-2.jpg"/>
+			        			</a>
+			        		</div>
+			        		<div class="item">
+			        			<a class="link" href="#">
+			        				<div class="hovercontent">
+			        					<i class="fa fa-plus fa-3x"></i>
+			        				</div>
+			        				<img src="img/item-3.jpg" />
+			        			</a>
+			        		</div>
+			        		<div class="item">
+			        			<a class="link" href="#">
+			        				<div class="hovercontent">
+			        					<i class="fa fa-plus fa-3x"></i>
+			        				</div>
+			        				<img src="img/item-4.jpg" />
+			        			</a>
+			        		</div>
+			        	</div>
+						
 					</div>
-					<div class="carte">
-						<h1>Carte</h1>
+					<div class="carte container-element">
+						<span>Carte</span>
 					</div>
 				</section>
 			</main>
@@ -90,8 +127,8 @@
 		<script src="js/functions.min.js"></script>
 		<script src="js/velocity.min.js"></script>
 		<script src="js/bubbles.min.js"></script>
-		<script src="js/modernizr.min.js"></script>
-		<script src="js/grid.min.js"></script>
+		<script src="js/modernizr.js"></script>
+		<!--<script src="js/grid.min.js"></script>-->
 		<script src="js/functions.js"></script>
 	</body>
 </html>

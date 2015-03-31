@@ -26,7 +26,7 @@
 }
 .focus-container {
 	width: 100%;
-	height: 1000px;
+	height: auto;
 	background-color: #fff;
 	margin-top:300px;
 }
@@ -194,9 +194,8 @@
 }
 .left-container {
 	position: absolute;
-	background-color: #E5EAED;
 	width: 250px;
-	height: 1000px;
+	height: auto;
 	-moz-box-shadow: inset 0px 5px 0px 0px #63081A;
 	-webkit-box-shadow: inset 0px 5px 0px 0px #63081A;
 	-o-box-shadow: inset 0px 5px 0px 0px #63081A;
@@ -208,7 +207,8 @@
 	background-color: #fff;
 	padding-left: 250px;
 	width: 100%;
-	height: 1000px;
+	height: auto;
+	min-height: 600px;
 	-moz-box-shadow: inset 0px 5px 0px 0px #63081A;
 	-webkit-box-shadow: inset 0px 5px 0px 0px #63081A;
 	-o-box-shadow: inset 0px 5px 0px 0px #63081A;
@@ -229,6 +229,7 @@
 	margin: 0;
 	transition: all 0.2s ease-out;
 }
+/*
 .left-container li:hover {
 	color: #3D464D;
 	transform: translateX(+20px);
@@ -238,14 +239,53 @@
 	box-shadow: inset 230px 0px 0px 0px #fff;
 	transition: color, transform 0.2s ease-in, box-shadow 0.4s ease-in;
 	cursor: pointer;
+}*/
+.left-container a, .left-container a:visited, .left-container a:hover, .left-container a:active{
+  -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+	position:relative;
+  	transition:0.5s color ease;
+	text-decoration:none;
+	color:#95a5a6;
+	font-size:25px;
+	cursor: pointer;
 }
-.left-container li.active {
-	color: #3D464D;
-	transform: translateX(+20px);
-	-moz-box-shadow: inset 230px 0px 0px 0px #fff;
-	-webkit-box-shadow: inset 230px 0px 0px 0px #fff;
-	-o-box-shadow: inset 230px 0px 0px 0px #fff;
-	box-shadow: inset 230px 0px 0px 0px #fff;
+.left-container a:hover{
+	color:#171614;
+}
+.left-container a.after:after{
+  	content: "";
+  	transition:0.5s all ease;
+  	-webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+  	position:absolute;
+}
+
+.left-container a.after:after{
+  bottom:-0.25em;
+}
+.left-container a.after:after{
+  height:5px;
+  height:0.35rem;
+  width:0;
+  background:#171614;
+}
+
+.left-container a.second:after{
+  right:0;
+}
+
+.left-container a.before:hover:before,a.after:hover:after{
+  width:100%;
+}
+.container-element {
+	width: 100%;
+}
+.left-container li.active a.after:after{
+	width: 100%;
+}
+.left-container li.active a{
+	color:#171614;
 }
 .right-container .presentation {
 
@@ -255,4 +295,19 @@
 }
 .right-container .carte {
 	display: none;
+}
+.right-container {
+	padding-top: 30px;
+	text-align: center;
+}
+.right-container span {
+	font-family: 'Cookie';
+	font-size: 30px;
+}
+.right-container .grid {
+	box-shadow: none;
+	background-color: transparent;
+}
+.right-container .grid .item {
+	padding: 5px;
 }

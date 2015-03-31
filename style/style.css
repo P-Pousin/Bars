@@ -12,7 +12,7 @@ a {
 }
 nav a:focus {
   box-shadow: #fff 100px 0px 0px 0px inset;
-  color: #63081A;
+  color: #1F518B;
 }
 article {
   font-size: 30px;
@@ -25,7 +25,7 @@ article {
 article p {
   font-family: 'Cookie';
   padding: 15px;
-  box-shadow: #63081A 0 0px 0px 2px inset;
+  box-shadow: #1F518B 0 0px 0px 2px inset;
   color: #fff;
   width: 200px;
   margin: 0 auto;
@@ -38,7 +38,7 @@ article p {
 }
 article p:hover {
   cursor: pointer;
-  color: #63081A;
+  color: #1F518B;
   box-shadow: #fff 0 0px 0px 50px inset;
 }
 
@@ -62,7 +62,7 @@ SECTION MENU TOP
   opacity: 0;
   top: -100px;
   padding-bottom: 6px;
-  border-bottom: 2px solid #63081A;
+  border-bottom: 2px solid #1F518B;
   font-family: 'Kaushan Script';
   -webkit-transition: all 800ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
   -moz-transition: all 800ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
@@ -175,7 +175,7 @@ nav ul a {
 }
 nav ul a:hover {
   box-shadow: #fff 100px 0px 0px 0px inset;
-  color: #63081A;
+  color: #1F518B;
   -webkit-transition: all 500ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
   -moz-transition: all 500ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
   -ms-transition: all 500ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
@@ -236,7 +236,7 @@ SECTION HOME
   border-radius: 100%;
   width: 400px;
   margin: 0 auto;
-  box-shadow: #63081A 0 0px 0px 5px inset;
+  box-shadow: #1F518B 0 0px 0px 5px inset;
 }
 .card-content h1 {
   font-family: 'Cookie';
@@ -542,5 +542,16 @@ p {
   100% {
     -webkit-transform: translateX(0) scale(1);
             transform: translateX(0) scale(1);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #contact { 
+    background: url(./../img/Bordeaux-1.jpg) 50% 50% no-repeat fixed; 
+  }
+  #about { 
+    background: url(./../img/Bordeaux-2.jpg) 50% 50% no-repeat fixed; 
+  }
+  #home {
+    background: url(./../img/Beer-BW.gif) 50% 0 no-repeat fixed; 
   }
 }
