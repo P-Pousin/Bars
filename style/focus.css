@@ -3,11 +3,12 @@
 .focus-header {
 	width: 100%;
 	height: 300px;
-	background-position: left;
+	background-position: left 50%;
   	margin: 0 auto; 
   	max-width: 1920px; 
   	position: relative; 
   	z-index: -1;
+  	background-image: url(./../img/Beer-3.jpg);
 }
 .focus-header .left-side {
 	position: absolute;
@@ -15,6 +16,8 @@
 	height: 100%;
   	padding: 0;
   	overflow: hidden;
+  	z-index: 200;
+  	background-color: rgba(23,22,20,0.8);
 }
 .focus-header .right-side {
 	position: relative;
@@ -27,13 +30,13 @@
 .focus-container {
 	width: 100%;
 	height: auto;
-	background-color: #fff;
+	background-color: #171614;
 	margin-top:300px;
 }
 
-.focus-header, .left-side:before {
+.focus-header{
 	position: absolute;
-  background-image: url(./../img/Beer-3.jpg);
+  
   /*background-attachment: fixed;*/
   background-position: 50% 50%;
   left: 0;
@@ -59,24 +62,6 @@
 	margin: 0 auto;
 	margin-top: 30px;
 	box-shadow: #63081A 0 0px 0px 2px inset;
-}
-.left-side:before {
-  	content: '';
-  	position: absolute;
-  	top: 0;
-  	left: 0;
-  	width: 100%;
-  	height: 100%;
-  	-webkit-filter: blur(5px) contrast(1.3) brightness(0.4);
-	-moz-filter: blur(5px) contrast(1.3) brightness(0.4);
-	-o-filter: blur(5px) contrast(1.3) brightness(0.4);
-	-ms-filter: blur(5px) contrast(1.3) brightness(0.4); 
-	filter: blur(5px) contrast(1.3) brightness(0.4);
-  /*
-  filter: brightness(0.4) blur(10px);
-  */
-  overflow: hidden;
-
 }
 .left-side > * { 
 	position: relative; 
@@ -192,9 +177,48 @@
 	margin: 0 auto;
 	padding: 0;
 }
+.menu-resp {
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	z-index: 9999;
+	  -webkit-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    -moz-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    -ms-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    -o-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    display: none;
+}
+.menu-resp:hover {
+	transform: translateX(5px);
+	cursor: pointer;
+  	-webkit-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    -moz-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    -ms-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    -o-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+}
+.close-menu-resp {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	z-index: 9999;
+	-webkit-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    -moz-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    -ms-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    -o-transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    transition: all 300ms cubic-bezier(0.490, 0.500, 0.150, 1.360);
+    display: none;
+}
+.close-menu-resp:hover {
+	cursor: pointer;
+	transform: rotate(180deg);
+}
 .left-container {
 	position: absolute;
 	width: 250px;
+	transform: scale(1);
+	background-color: #171614;
 	height: auto;
 	-moz-box-shadow: inset 0px 5px 0px 0px #63081A;
 	-webkit-box-shadow: inset 0px 5px 0px 0px #63081A;
@@ -204,15 +228,18 @@
 }
 .right-container {
 	position: relative;
-	background-color: #fff;
+	text-align: center;
 	padding-left: 250px;
 	width: 100%;
 	height: auto;
-	min-height: 600px;
+	min-height: 723px;
+	/*
 	-moz-box-shadow: inset 0px 5px 0px 0px #63081A;
 	-webkit-box-shadow: inset 0px 5px 0px 0px #63081A;
 	-o-box-shadow: inset 0px 5px 0px 0px #63081A;
 	box-shadow: inset 0px 5px 0px 0px #63081A;
+	*/
+	background-clip: content-box;
 }
 .left-container ul {
 	list-style: none;
@@ -222,7 +249,7 @@
 	padding-left: 0;
 }
 .left-container li {
-	color: #919CA4;
+	color: #fff;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	padding-left: 40px;
@@ -246,12 +273,12 @@
 	position:relative;
   	transition:0.5s color ease;
 	text-decoration:none;
-	color:#95a5a6;
+	color:#fff;
 	font-size:25px;
 	cursor: pointer;
 }
 .left-container a:hover{
-	color:#171614;
+	color:#fff;
 }
 .left-container a.after:after{
   	content: "";
@@ -268,7 +295,7 @@
   height:5px;
   height:0.35rem;
   width:0;
-  background:#171614;
+  background:#fff;
 }
 
 .left-container a.second:after{
@@ -285,7 +312,7 @@
 	width: 100%;
 }
 .left-container li.active a{
-	color:#171614;
+	color:#fff;
 }
 .right-container .presentation {
 
@@ -295,10 +322,6 @@
 }
 .right-container .carte {
 	display: none;
-}
-.right-container {
-	padding-top: 30px;
-	text-align: center;
 }
 .right-container span {
 	font-family: 'Cookie';
@@ -310,4 +333,78 @@
 }
 .right-container .grid .item {
 	padding: 5px;
+}
+.right-container .restauration-container {
+	position: relative;
+	width: 50%;
+	float: left;
+	min-height: 723px;
+	text-align: center;
+	/*background: url(./../img/Chalk-border.png) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-size: 10%;*/
+	/*background-color: #171614;*/
+}
+
+.restauration-container img.carte-background, .boisson-container img.carte-background {
+	height: 753px;
+	width: auto;
+	float: right;
+	transition: all 0.3s linear;
+}
+.img-title {
+	width: 100% !important;
+	margin: 0 auto;
+	height: auto !important;
+}
+
+.restauration-container:hover img.carte-background, .boisson-container:hover img.carte-background {
+	transform: scale(1.1);
+	filter: blur(5px);
+	transition: all 5s linear;
+}
+/*
+.restauration-container:hover, .boisson-container:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: all 0.3s ease-in;
+}*/
+.right-container .boisson-container {
+	position: relative;
+	width: 50%;
+	float: right;
+	min-height: 723px;
+}
+@media screen and (max-width: 600px) {
+	section.sub.right-side {
+		display: none;
+	}
+	section.sub.left-side {
+		text-align: center;
+		position: relative;
+		width: 100%;
+	}
+	.left-container {
+		transform: scale(0);
+	}
+	.right-container {
+		width: 100%;
+		padding-left: 0;
+	}
+	.menu-resp {
+		display: block;
+	}
+	/*
+	.left-container:hover {
+		transform: scale(1);
+		width: 100%;
+		text-align: center;
+		transition: all 0.3s;
+		background-color: #fff;
+		z-index: 9999;
+	}
+	*/
+
 }
