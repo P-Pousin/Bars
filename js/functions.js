@@ -117,4 +117,9 @@ $(document).ready(function(){
 		$('.menu-resp').show();
 		$(this).hide();
 	});
+	var h = $(window).height();
+	$('.boisson-container, .restauration-container, .carte-background, .hovercontent').css('height', h);
+	/*$('.restauration-container').height()=h;
+	$('.carte-background').height()=h;
+	$('.hovercontent').height()=h;*/
 });

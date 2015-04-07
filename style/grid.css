@@ -1,12 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 .grid {
-  margin: 40px auto 40px;
+  /*margin: 40px auto 40px;*/
   font-size: 0;
   text-align: left;
   background: #222;
 }
 .right-container .grid {
-  padding: 20px;
+  /*padding: 20px;*/
 }
 .item {
   font-size: 12px;

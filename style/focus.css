@@ -10,14 +10,19 @@
   	z-index: -1;
   	background-image: url(./../img/Beer-3.jpg);
 }
-.focus-header .left-side {
+.left-side {
 	position: absolute;
 	width: 250px;
-	height: 100%;
+	/*
+	width: 100%;
+	*/
+	height: 300px;
   	padding: 0;
   	overflow: hidden;
-  	z-index: 200;
-  	background-color: rgba(23,22,20,0.8);
+  	z-index: 9990;
+  	background-color: rgba(23,22,20,0.95);
+  	/*background-color:rgba(99,8,26,0.95);*/
+  	
 }
 .focus-header .right-side {
 	position: relative;
@@ -31,7 +36,7 @@
 	width: 100%;
 	height: auto;
 	background-color: #171614;
-	margin-top:300px;
+	/*margin-top:300px;*/
 }
 
 .focus-header{
@@ -224,7 +229,8 @@
 	-webkit-box-shadow: inset 0px 5px 0px 0px #63081A;
 	-o-box-shadow: inset 0px 5px 0px 0px #63081A;
 	box-shadow: inset 0px 5px 0px 0px #63081A;
-	z-index: 9999;
+	z-index: 9900;
+	padding-top: 300px;
 }
 .right-container {
 	position: relative;
@@ -232,7 +238,7 @@
 	padding-left: 250px;
 	width: 100%;
 	height: auto;
-	min-height: 723px;
+	/*min-height: 723px;*/
 	/*
 	-moz-box-shadow: inset 0px 5px 0px 0px #63081A;
 	-webkit-box-shadow: inset 0px 5px 0px 0px #63081A;
@@ -247,12 +253,13 @@
 	font-family: 'Cookie';
 	font-size: 30px;
 	padding-left: 0;
+	text-align: center;
 }
 .left-container li {
 	color: #fff;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	padding-left: 40px;
+	/*padding-left: 40px;*/
 	margin: 0;
 	transition: all 0.2s ease-out;
 }
@@ -326,6 +333,7 @@
 .right-container span {
 	font-family: 'Cookie';
 	font-size: 30px;
+	color: #fff;
 }
 .right-container .grid {
 	box-shadow: none;
@@ -338,13 +346,13 @@
 	position: relative;
 	width: 50%;
 	float: right;
-	min-height: 723px;
+	/*min-height: 723px;*/
 }
 .right-container .restauration-container {
 	position: relative;
 	width: 50%;
 	float: left;
-	min-height: 723px;
+	/*min-height: 723px;*/
 	text-align: center;
 	/*background: url(./../img/Chalk-border.png) no-repeat center center fixed; 
   	-webkit-background-size: cover;
@@ -356,7 +364,6 @@
 }
 
 .restauration-container img.carte-background, .boisson-container img.carte-background {
-	height: 753px;
 	width: auto;
 	float: right;
 	transition: all 0.3s linear;
@@ -369,23 +376,19 @@
 
 .restauration-container:hover img.carte-background, .boisson-container:hover img.carte-background {
 	transform: scale(1.1);
-	filter: blur(5px);
+	filter: blur(15px);
 	transition: all 5s linear;
 }
 .carte-more {
-	padding-left: 120px;
-	padding-right: 120px;
+	padding-left: 150px;
+	padding-right: 150px;
 	opacity: 0.8;
 }
 .carte-more:hover, .carte-more:hover {
 	transform: rotate(2deg);
 	transition: transform 0.4s;
 }
-/*
-.restauration-container:hover, .boisson-container:hover {
-	background-color: rgba(255, 255, 255, 0.1);
-	transition: all 0.3s ease-in;
-}*/
+
 
 @media screen and (max-width: 600px) {
 	section.sub.right-side {
@@ -424,17 +427,17 @@
 	.right-container .boisson-container {
 		position: relative;
 		width: 100%;
-		min-height: 300px;
+		/*min-height: 300px;*/
 	}
 	.right-container .restauration-container {
 		position: relative;
 		width: 100%;
 		float: left;
-		min-height: 300px;
+		/*min-height: 300px;*/
 		text-align: center;
 	}
 	.right-container {
-		min-height: 600px;
+		/*min-height: 600px;*/
 	}
 	.restauration-container img.carte-background, .boisson-container img.carte-background {
 		height: auto;
